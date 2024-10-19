@@ -1,7 +1,7 @@
 ## Interface: 30300
 ## Title: WORS Slayer Helper
 ## Notes: Provides location help for Slayer tasks.
-## Author: Untitled - Discord @Llama69420
+## Author: Untitled - Discord@Llama69420
 ## Version: 1.0
 
 WORS_SlayerHelper.lua
