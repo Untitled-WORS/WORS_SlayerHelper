@@ -1,69 +1,14 @@
 -- WORS Slayer Helper Task Data
 
 WORSSlayerTaskData = {
-	   --Turael
-	["Banshees"] = {
-		"Morytania Slayer Tower",
-	},
-	["Bats"] = {
-		"NE of Varrock",
-		"West of Mage Bank",
-		"en route to Morytania"
-	},
-	["Bears"] = {
-		"West Ice Mountian",
-		"Wilderness",
-	},
+	--Turael
 	["Birds"] = {
 		"Port Sarim Docks",
 		"Lumbridge Farm (East)",
 		"Lumbridge Farm (West)"
 	},
-	["Cave bugs"] = {
-		"Lumbridge Swamp",
-	},
-	["Cave crawlers"] = {
-		"Lumbridge Swamp",
-	},
-	["Cave slime"] = {
-		"Lumbridge Swamp",
-	},
-	["Cows"] = {
-		"Lumbridge",
-		"Crafting Guild",
-	},
-	["Crawling Hands"] = {
-		"Morytania Slayer Tower",
-	},
-	["Dogs"] = {
-		"Varrock Lumberyard",
-	},
-	["Dwarves"] = {
-		"Ice Mountain",
-		"Falador Mining Guild",
-		"Three test",
-	},
-	["Ghosts"] = {
-		"test",
-		"test",
-		"test",
-	},
 	["Goblins"] = {
 		"Lumbridge Goblin Camp",
-		"Lumbridge Goblin Camp",
-		"Lumbridge Goblin Camp",
-	},
-	["Icefiends"] = {
-		"Ice Mountain",
-	},
-	["Kalphite"] = {
-		"Kalphite Lair",
-	},
-	["Lizards"] = {
-		"Kharidian Desert",
-	},
-	["Minotaurs"] = {
-		"N/A - If you got this task, bug report it",
 	},
 	["Monkeys"] = {
 		"Karamja",
@@ -72,167 +17,372 @@ WORSSlayerTaskData = {
 		"Lumbridge Swamp",
 		"Varrock Sewers",
 	},
+	["Spiders"] = {
+		"Varrock Sewers",
+		"Edgeville Dungeon",
+	},
+	["Bats"] = {
+		"NE of Varrock",
+		"West of Mage Bank",
+		"en route to Morytania"
+	},
+	["Cows"] = {
+		"Lumbridge",
+		"Crafting Guild",
+	},
+	["Dwarves"] = {
+		"Ice Mountain",
+		"Falador Mining Guild",
+	},
+	["Minotaurs"] = {
+		"N/A - Bug",
+	},
 	["Scorpions"] = {
 		"Varrock Sewers",
 		"Al Kharid Mine",
 		"Karamja Volcano"
 	},
+	["Zombies"] = {
+		"Varrock Sewers",
+		"Draynor Village Dungeon",
+		"Wilderness Graveyard (20 - 28)"
+	},
+	["Bears"] = {
+		"West Ice Mountian",
+		"Wilderness",
+	},
+	["Ghosts"] = {
+		"Varrock Sewers",
+	},
+	["Dogs"] = {
+		"Kharidian Desert",
+		"Varrock Lumberyard",
+	},
+	["Kalphite"] = {
+		"Kalphite Lair",
+	},
 	["Skeletons"] = {
 		"Varrock Sewers",
 		"Edgeville Dungeon",
 	},
-	["Spiders"] = {
-		"Varrock Sewers",
-		"Edgeville Dungeon",
+	["Icefiends"] = {
+		"Ice Mountain",
 	},
 	["Wolves"] = {
 		"West Ice Mountian",
 		"Wildy Level 10",
 	},
-	["Zombies"] = {
-		"Draynor Village Dungeon",
-		"Wilderness Graveyard (20 - 28)",
+	["Crawling Hands"] = {
+		"Morytania Slayer Tower",
+	},
+	["Cave Bugs"] = {
+		"Lumbridge Swamp Caves",
+	},
+	["Cave Crawlers"] = {
+		"Lumbridge Swamp Caves",
+	},
+	["Banshees"] = {
+		"Morytania Slayer Tower",
+	},
+	["Cave Slime"] = {
+		"Lumbridge Swamp Caves",
+	},
+	["Lizards"] = {
+		"Kharidian Desert",
 	},
 	--Mazchna
+	
+	["Bats"] = {
+		"NE of Varrock",
+		"West of Mage Bank",
+		"en route to Morytania"
+	},
+	["Scorpions"] = {
+		"Varrock Sewers",
+		"Al Kharid Mine",
+		"Karamja Volcano"
+	},
+	["Zombies"] = {
+		"Varrock Sewers",
+		"Draynor Village Dungeon",
+		"Wilderness Graveyard (20 - 28)"
+	},
+	["Bears"] = {
+		"West Ice Mountian",
+		"Wilderness",
+	},
+	["Ghosts"] = {
+		"Varrock Sewers",
+	},
+	["Dogs"] = {
+		"Kharidian Desert",
+		"Varrock Lumberyard",
+	},
+	["Flesh Crawlers"] = {
+		"N/A - Bug",
+		"N/A - Bug",
+		"N/A - Bug"
+	},
+	["Kalphite"] = {
+		"Kalphite Lair",
+	},
+	["Skeletons"] = {
+		"Varrock Sewers",
+		"Edgeville Dungeon",
+	},
+	["Hobgoblins"] = {
+		"Asgarnia Ice Dungeon",
+		"Wildy Bandit Camp Mine",
+		"West of Crafting Guild"
+	},
+	["Wolves"] = {
+		"West Ice Mountian",
+		"Wildy Level 10",
+	},
+	["Ghouls"] = {
+		"Canifis (Morytania Swamp Gate)",
+	},
+	["Hill Giants"] = {
+		"Edgeville Dungeon",
+	},
+	["Shades"] = {
+		"Canifis ",
+	},
 	["Catablepon"] = {
-		"N/A - If you got this task, bug report it",
+		"N/A - Bug",
+		"N/A - Bug",
+		"N/A - Bug"
+	},
+	["Vampyres"] = {
+		"N/A - Bug",
+		"N/A - Bug",
+		"N/A - Bug"
+	},
+	["Ice warriors"] = {
+		"Asgarnia Ice Dungeon",
+		"West Wildy Level 51+ ",
+	},
+	["Crawling hands"] = {
+		"Morytania Slayer Tower",
+	},
+	["Cave bugs"] = {
+		"Lumbridge Swamp Caves",
+	},
+	["Cave crawlers"] = {
+		"Lumbridge Swamp Caves",
+	},
+	["Banshees"] = {
+		"Morytania Slayer Tower",
+	},
+	["cave slime"] = {
+		"Lumbridge Swamp Caves",
+	},
+	["Rockslugs"] = {
+		"Lumbridge Swamp Caves",
+		"Lumbridge Caverns",
+	},
+	["Lizards"] = {
+		"Kharidian Desert",
 	},
 	["Cockatrice"] = {
 		"Fremennik Slayer Dungeon",
 	},
-	["Flesh Crawlers"] = {
-	},
-	["Ghouls"] = {
-		"Canifis (Near gate to Morytania Swamp)",
-	},
-	["Hill Giants"] = {
-	},
-	["Hobgoblins"] = {
-		"Asgarnia Ice Dungeon (Near Mudskipper Point)",
-		"Wilderness Bandit Camp mine",
-	},
-	["Ice warriors"] = {
-		"Asgarnia Ice Dungeon (Near Mudskipper Point)",
-	},
-	["Killerwatts"] = {
-		"N/A - If you got this task, bug report it",
+	["Pyrefiends"] = {
+		"Fremennik Slayer Dungeon",
 	},
 	["Mogres"] = {
-		"N/A - If you got this task, bug report it",
+		"N/A - Bug",
+		"N/A - Bug",
+		"N/A - Bug"
+	},
+	["Wall beasts"] = {
+		"Lumbridge Swamp Caves",
+	},
+	["Killerwatts"] = {
+		"N/A - Bug",
+		"N/A - Bug",
+		"N/A - Bug"
+	},
+	
+	--Vannaka
+
+	["Kalphite"] = {
+		"Kalphite Lair",
+	},
+	["Hobgoblins"] = {
+		"Asgarnia Ice Dungeon",
+		"Wildy Bandit Camp Mine",
+		"West of Crafting Guild"
+	},
+	["Ghouls"] = {
+		"Canifis (Morytania Swamp Gate)",
+	},
+	["Hill Giants"] = {
+		"Edgeville Dungeon",
+	},
+	["Shades"] = {
+		"Canifis ",
+	},
+	["Vampyres"] = {
+		"N/A - Bug",
+		"N/A - Bug",
+		"N/A - Bug"
+	},
+	["Ankou"] = {
+		"Wilderness",
+	},
+	["Moss giants"] = {
+		"Varrock Sewers",
+	},
+	["Ogres"] = {
+		"N/A - Bug",
+		"N/A - Bug",
+		"N/A - Bug"
+	},
+	["Otherworldly beings"] = {
+		"N/A - Bug",
+		"N/A - Bug",
+		"N/A - Bug"
+	},
+	["Ice warriors"] = {
+		"Asgarnia Ice Dungeon",
+		"West Wildy Level 51+ ",
+	},
+	["Crocodiles"] = {
+		"N/A - Bug",
+		"N/A - Bug",
+		"N/A - Bug"
+	},
+	["Ice giants"] = {
+		"Asgarnia Ice Dungeon",
+		"West Wildy Level 51+ ",
+	},
+	["Lesser demons"] = {
+		"Wizard Tower Bottom Floor",
+		"Karamja Volcano",
+		"Wildy KBD Entrance"
+	},
+	["Shadow warriors"] = {
+		"N/A - Bug",
+		"N/A - Bug",
+		"N/A - Bug"
+	},
+	["Trolls"] = {
+		"N/A - Bug",
+		"N/A - Bug",
+		"N/A - Bug"
+	},
+	["Werewolves"] = {
+		"Canifis ",
+	},
+	["Blue dragons"] = {
+		"Wildy Near KBD Lair",
+	},
+	["Fire giants"] = {
+		"N/A - Bug",
+		"N/A - Bug",
+		"N/A - Bug"
+	},
+	["Jungle horrors"] = {
+		"N/A - Bug",
+		"N/A - Bug",
+		"N/A - Bug"
+	},
+	["Elves"] = {
+		"N/A - Bug",
+		"N/A - Bug",
+		"N/A - Bug"
+	},
+	["Dagannoth"] = {
+		"N/A - Bug",
+		"N/A - Bug",
+		"N/A - Bug"
+	},
+	["Hellhounds"] = {
+		"N/A - Bug",
+		"N/A - Bug",
+		"N/A - Bug"
+	},
+	["Cockatrice"] = {
+		"Fremennik Slayer Dungeon",
 	},
 	["Pyrefiends"] = {
 		"Fremennik Slayer Dungeon",
 	},
-	["Rockslugs"] = {
+	["Mogres"] = {
+		"N/A - Bug",
+		"N/A - Bug",
+		"N/A - Bug"
 	},
-	["Shades"] = {
-		"Canifis (Outside Slayer Tower)",
+	["Harpie Bug Swarms"] = {
+		"N/A - Bug",
+		"N/A - Bug",
+		"N/A - Bug"
 	},
-	["Vampyres"] = {
+	["Molanisks"] = {
+		"N/A - Bug",
+		"N/A - Bug",
+		"N/A - Bug"
 	},
-	["Wall beasts"] = {
-		"Lumbridge Swamp Cave",
+	["Basilisks"] = {
+		"Fremennik Slayer Dungeon",
 	},
-	--Vannaka
+	["Sea snakes"] = {
+		"N/A - Bug",
+		"N/A - Bug",
+		"N/A - Bug"
+	},
+	["Terror dogs"] = {
+		"N/A - Bug",
+		"N/A - Bug",
+		"N/A - Bug"
+	},
+	["Fever spiders"] = {
+		"N/A - Bug",
+		"N/A - Bug",
+		"N/A - Bug"
+	},
+	["Infernal Mages"] = {
+		"Morytania Slayer Tower",
+	},
+	["Brine rats"] = {
+		"N/A - Bug",
+		"N/A - Bug",
+		"N/A - Bug"
+	},
+	["Bloodveld"] = {
+		"Morytania Slayer Tower",
+	},
+	["Jellies"] = {
+		"Morytania Slayer Tower",
+	},
+	["Turoth"] = {
+		"Fremennik Slayer Dungeon",
+	},
 	["Aberrant spectres"] = {
+		"Morytania Slayer Tower",
+	},
+	["Spiritual creatures"] = {
+		"N/A - Bug",
+		"N/A - Bug",
+		"N/A - Bug"
+	},
+	["Dust devils"] = {
+		"N/A - Bug",
+		"N/A - Bug",
+		"N/A - Bug"
+	},
+	["Kurask"] = {
+		"Fremennik Slayer Dungeon",
+	},
+	["Gargoyles"] = {
+		"Morytania Slayer Tower",
+	},
+	["Nechryael"] = {
 		"Morytania Slayer Tower",
 	},
 	["Abyssal demons"] = {
 		"Morytania Slayer Tower",
 	},
-	["Ankou"] = {
-	},
-	["Basilisks"] = {
-		"Fremennik Slayer Dungeon",
-	},
-	["Bloodveld"] = {
-		"Morytania Slayer Tower",
-	},
-	["Blue dragons"] = {
-		"Wildermess (Near KBD Lair)",
-	},
-	["Brine rats"] = {
-		"N/A - If you got this task, bug report it",
-	},
-	["Crocodiles"] = {
-		"N/A - If you got this task, bug report it",
-	},
-	["Dagannoth"] = {
-		"N/A - If you got this task, bug report it",
-	},
-	["Dust devils"] = {
-		"N/A - If you got this task, bug report it",
-	},
-	["Elves"] = {
-		"N/A - If you got this task, bug report it",
-	},
-	["Fever spiders"] = {
-		"N/A - If you got this task, bug report it",
-	},
-	["Fire giants"] = {
-		"N/A - If you got this task, bug report it",
-	},
-	["Gargoyles"] = {
-		"Morytania Slayer Tower",
-	},
-	["Harpie Bug Swarms"] = {
-		"N/A - If you got this task, bug report it",
-	},
-	["Hellhounds"] = {
-	},
-	["Ice giants"] = {
-		"Asgarnia Ice Dungeon (Near Mudskipper Point)",
-	},
-	["Infernal Mages"] = {
-		"Morytania Slayer Tower",
-	},
-	["Jellies"] = {
-		"Fremennik Slayer Dungeon",
-	},
-	["Jungle horrors"] = {
-		"N/A - If you got this task, bug report it",
-	},
 
-	["Kurask"] = {
-		"Fremennik Slayer Dungeon",
-	},
-	["Lesser demons"] = {
-		"Karamja Volcano",
-		"Wizard Tower Bottom Floor",
-	},
-	["Molanisks"] = {
-		"N/A - If you got this task, bug report it",
-	},
-	["Moss giants"] = {
-		"Varrock Sewers",
-	},
-	["Nechryael"] = {
-		"Morytania Slayer Tower",
-	},
-	["Ogres"] = {
-		"N/A - If you got this task, bug report it",
-	},
-	["Otherworldly beings"] = {
-		"N/A - If you got this task, bug report it",
-	},
-	["Sea snakes"] = {
-		"N/A - If you got this task, bug report it",
-	},
-	["Shadow warriors"] = {
-	},
-	["Spiritual creatures"] = {
-		"N/A - If you got this task, bug report it",
-	},
-	["Terror dogs"] = {
-		"N/A - If you got this task, bug report it",
-	},
-	["Trolls"] = {
-	},
-	["Turoth"] = {
-		"Fremennik Slayer Dungeon",
-	},
-	["Werewolves"] = {
-		"N/A - If you got this task, bug report it",
-	},
-   
 }
