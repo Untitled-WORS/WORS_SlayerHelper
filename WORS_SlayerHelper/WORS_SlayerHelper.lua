@@ -33,7 +33,7 @@ local showReminderText = true  -- Track visibility of reminder text
 -- Define a table that maps creature names (from Slayer tasks) to a list of required items (item ID or name)
 local requiredItems = {
     -- Testing remove rats on release 
-	["Rats"] = {"Nose peg", "Earmuffs", "Bag of Salt"},  -- Example creature name and required items
+	--["Rats"] = {"Nose peg", "Earmuffs", "Bag of Salt"},  -- Example creature name and required items
 	
 	
 	["Lizards"] = 			{"Ice Cooler",},
