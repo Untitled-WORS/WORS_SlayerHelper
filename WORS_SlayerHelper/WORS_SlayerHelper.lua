@@ -33,8 +33,8 @@ local showReminderText = true  -- Track visibility of reminder text
 -- Define a table that maps creature names (from Slayer tasks) to a list of required items (item ID or name)
 local requiredItems = {
     -- Testing remove rats on release 
-	--["Rats"] = {"Nose peg", "Earmuffs", "Bag of Salt"},  -- Example creature name and required items
-	
+	["Rats"] = {"Nose peg", "Earmuffs", "Bag of Salt"},  -- Example creature name and required items
+	["Cave Bugs"] = {"Nose peg", "Earmuffs", "Bag of Salt"},  -- Example creature name and required items
 	
 	["Lizards"] = 			{"Ice Cooler",},
 	["Rockslugs"] = 		{"Bag of Salt",},
@@ -191,15 +191,14 @@ slayerTaskFrame:SetScript("OnEvent", function(self, event)
 end)
 
 -- Update the UI when an item is moved in/out of the inventory or when equipment is changed
+-- Event handling for updates
+slayerTaskFrame:RegisterEvent("QUEST_LOG_UPDATE")
 slayerTaskFrame:RegisterEvent("BAG_UPDATE")
 slayerTaskFrame:RegisterEvent("PLAYER_EQUIPMENT_CHANGED")
 
-slayerTaskFrame:SetScript("OnEvent", function(self, event)
-    -- Only update when the event is related to item movement or equipment change
-    if event == "BAG_UPDATE" or event == "PLAYER_EQUIPMENT_CHANGED" then
-        DisplaySlayerTask()  -- Recheck the task and update the UI
-    end
-end)
+-- Single script handler for all events
+slayerTaskFrame:SetScript("OnEvent", DisplaySlayerTask)
+
 
 -- Minimap Icon for WORS_SlayerHelper using LibDBIcon and Ace3
 local addon = LibStub("AceAddon-3.0"):NewAddon("WORS_SlayerHelper")
