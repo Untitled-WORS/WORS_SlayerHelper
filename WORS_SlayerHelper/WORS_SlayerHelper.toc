@@ -5,6 +5,5 @@
 ## Version: 1.0
 ## DefaultState: disabled
 
-
 WORS_SlayerHelper.lua
 WORS_SlayerHelper_Data.lua
