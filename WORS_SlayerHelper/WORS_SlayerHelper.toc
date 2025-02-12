@@ -1,14 +1,10 @@
 ## Interface: 30300
 ## Title: Slayer Helper
-## Notes: Provides location suggestions for Slayer tasks in WORS and displays task progress.|n|nData is a mix of known WORS locations and data scraped from OSRS wiki may not be 100% accurate to WORS.|n|Send bugs or more locations to Untitled - Llama69420 on discord.
+## Notes: Provides location suggestions for Slayer tasks in WORS and displays task progress.|n|nData is a mix of known WORS locations and data scraped from OSRS wiki may not be 100% accurate to WORS.|n|nSend bugs or more locations to Untitled - Llama69420 on discord.
 ## Author: Untitled - Discord@Llama69420
 ## Version: 1.0
 ## DefaultState: disabled
 
 
-
 WORS_SlayerHelper.lua
 WORS_SlayerHelper_Data.lua
-
-
-
