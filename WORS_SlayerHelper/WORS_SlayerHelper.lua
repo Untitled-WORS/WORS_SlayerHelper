@@ -202,10 +202,10 @@ slayerTaskFrame:SetScript("OnEvent", DisplaySlayerTask)
 
 -- Minimap Icon for WORS_SlayerHelper using LibDBIcon and Ace3
 local addon = LibStub("AceAddon-3.0"):NewAddon("WORS_SlayerHelper")
-WORSLootMinimapButton = LibStub("LibDBIcon-1.0", true)
+WORSSlayerHelperMinimapButton = LibStub("LibDBIcon-1.0", true)
 local miniButton = LibStub("LibDataBroker-1.1"):NewDataObject("WORS_SlayerHelper", {
     type = "data source",
-    text = "WORS Slayer Helper",
+    text = "Slayer Helper",
     icon = "Interface\\Icons\\slayericon",
 	OnClick = function(self, btn)
 		if btn == "LeftButton" then
@@ -226,7 +226,7 @@ local miniButton = LibStub("LibDataBroker-1.1"):NewDataObject("WORS_SlayerHelper
         if not tooltip or not tooltip.AddLine then
             return
         end
-        tooltip:AddLine("WORS Slayer Helper\n\nLeft-click: Toggle Slayer Helper Window", nil, nil, nil, nil)
+        tooltip:AddLine("Slayer Helper\nLeft-click: Toggle Slayer Helper Window", nil, nil, nil, nil)
         tooltip:AddLine("Right-click: Toggle Location and Reminder Text", nil, nil, nil, nil)
     end,
 })
@@ -240,8 +240,5 @@ function addon:OnInitialize()
             },
         },
     })
-    WORSLootMinimapButton:Register("WORS_SlayerHelper", miniButton, self.db.profile.minimap)
-    loadLootTransparency()
+    WORSSlayerHelperMinimapButton:Register("WORS_SlayerHelper", miniButton, self.db.profile.minimap)
 end
-
-WORSLootMinimapButton:Show("WORS_SlayerHelper")
