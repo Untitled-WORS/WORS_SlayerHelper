@@ -1,4 +1,8 @@
 --- WORS Slayer Helper Addon
+
+SlayerHelperDB = SlayerHelperDB or {}
+SlayerHelperDB.showOnLaunch = SlayerHelperDB.showOnLaunch or false
+
 -- Provides location assistance for Slayer tasks
 local showLocationText = true
 local showReminderText = true  
@@ -183,7 +187,12 @@ local function DisplaySlayerTask()
         taskText:SetText(taskProgressText)
 
         -- Show the frame
-        slayerTaskFrame:Show()
+		
+		if WORS_DropTrackerDB.showOnLaunch == true then
+			WORS_DropTracker:Show()
+		else
+			WORS_DropTracker:Hide()
+		end
 
     else  -- Frame is hidden if no task is found
         slayerTaskFrame:Hide()
