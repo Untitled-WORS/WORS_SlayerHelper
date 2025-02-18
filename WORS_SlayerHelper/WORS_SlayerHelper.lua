@@ -1,36 +1,7 @@
 --- WORS Slayer Helper Addon
 -- Provides location assistance for Slayer tasks
-
--- Create the main addon frame
-local slayerTaskFrame = CreateFrame("Frame", "WORSSlayerTaskFrame", UIParent)
-slayerTaskFrame:SetSize(300, 140)  -- Adjust size for more text
-slayerTaskFrame:SetPoint("TOPRIGHT", -200, -150)  -- Start in the top-right corner, slightly centered
-slayerTaskFrame:SetMovable(true)
-slayerTaskFrame:EnableMouse(true)
-slayerTaskFrame:RegisterForDrag("LeftButton")
-slayerTaskFrame:SetScript("OnDragStart", slayerTaskFrame.StartMoving)
-slayerTaskFrame:SetScript("OnDragStop", slayerTaskFrame.StopMovingOrSizing)
-slayerTaskFrame:Hide()
-
-local titleText = slayerTaskFrame:CreateFontString(nil, "ARTWORK", "GameFontNormalLarge")
-titleText:SetPoint("TOPLEFT", 15, -15)
-titleText:SetText("")
-
--- Create a larger font for the task text without changing its color
-local taskText = slayerTaskFrame:CreateFontString(nil, "ARTWORK", "GameFontHighlight")  -- Keep the original color
-taskText:SetTextColor(1, 1, 1)  -- Set text color to white (R, G, B)
-taskText:SetFontObject(GameFontNormal)
-taskText:SetFont(GameFontNormal:GetFont(), 20, "OUTLINE")  -- Set to default font with size 16
-taskText:SetPoint("TOPLEFT", 15, -40)  -- Padding from the left
-taskText:SetPoint("TOPRIGHT", -15, -40)  -- Padding from the right
-taskText:SetWidth(270)  -- Adjust width for cleaner layout
-taskText:SetJustifyH("LEFT")
-
--- Variables to control text visibility
 local showLocationText = true
-local showReminderText = true  -- Track visibility of reminder text
-
--- Define a table that maps creature names (from Slayer tasks) to a list of required items (item ID or name)
+local showReminderText = true  
 local requiredItems = {
     -- Testing remove rats on release 
 	--["Rats"] = {"Nose peg", "Earmuffs", "Bag of Salt"},  -- Example creature name and required items
@@ -61,6 +32,37 @@ local requiredItems = {
 	["Turoths"] = 			{"Slayer's staff", "Leaf-bladed spear"},
 	["Kurasks"] = 			{"Slayer's staff", "Leaf-bladed spear"},
 }
+
+-- Create the main addon frame
+local slayerTaskFrame = CreateFrame("Frame", "WORSSlayerTaskFrame", UIParent)
+slayerTaskFrame:SetSize(250, 140)  -- Adjust size for more text
+slayerTaskFrame:SetPoint("TOPRIGHT", -200, -150)  -- Start in the top-right corner, slightly centered
+slayerTaskFrame:SetMovable(true)
+slayerTaskFrame:EnableMouse(true)
+slayerTaskFrame:RegisterForDrag("LeftButton")
+slayerTaskFrame:SetScript("OnDragStart", slayerTaskFrame.StartMoving)
+slayerTaskFrame:SetScript("OnDragStop", slayerTaskFrame.StopMovingOrSizing)
+slayerTaskFrame:Hide()
+
+local titleText = slayerTaskFrame:CreateFontString(nil, "ARTWORK", "GameFontNormalLarge")
+titleText:SetPoint("TOPLEFT", 15, -15)
+titleText:SetText("")
+
+
+
+-- Create a larger font for the task text without changing its color
+local taskText = slayerTaskFrame:CreateFontString(nil, "ARTWORK", "GameFontHighlight")  -- Keep the original color
+taskText:SetTextColor(1, 1, 1)  -- Set text color to white (R, G, B)
+taskText:SetFontObject(GameFontNormal)
+taskText:SetFont(GameFontNormal:GetFont(), 20, "OUTLINE")  -- Set to default font with size 16
+taskText:SetPoint("TOPLEFT", 15, -40)  -- Padding from the left
+taskText:SetPoint("TOPRIGHT", -15, -40)  -- Padding from the right
+taskText:SetWidth(270)  -- Adjust width for cleaner layout
+taskText:SetJustifyH("LEFT")
+
+
+
+
 
 -- Function to check if an item is in the player's bags or equipped (case-insensitive)
 local function IsItemEquippedOrInInventory(itemName)
@@ -137,6 +139,10 @@ local function DisplaySlayerTask()
 
                 -- Remove "Kill " from the start of the objectiveText
                 titleText:SetText("Slayer Task: " .. string.gsub(objectiveText, "^Kill ", ""))
+				-- Ensure titleText has been updated and size is valid
+                local textWidth = titleText:GetStringWidth()
+                local textHeight = titleText:GetStringHeight()
+			
                 local currentProgress = objectiveCompleted and objectiveRequired or 0
             end
 
@@ -199,6 +205,47 @@ slayerTaskFrame:RegisterEvent("PLAYER_EQUIPMENT_CHANGED")
 -- Single script handler for all events
 slayerTaskFrame:SetScript("OnEvent", DisplaySlayerTask)
 
+function toggleSlayerTaskFrame()
+    if WORSSlayerTaskFrame:IsShown() then
+        WORSSlayerTaskFrame:Hide()
+    else
+        WORSSlayerTaskFrame:Show()
+    end
+end
+
+function toggleLocationAndReminderText()
+    showLocationText = not showLocationText
+    showReminderText = not showReminderText  -- Toggle the reminder text visibility
+    DisplaySlayerTask()  -- Update display to reflect the toggled reminder
+end
+
+local clickFrame = CreateFrame("Button", nil, slayerTaskFrame)
+clickFrame:SetPoint("TOPLEFT", titleText, "TOPLEFT")
+clickFrame:SetSize(80, 20)
+
+
+-- Define the OnClick function
+clickFrame:SetScript("OnClick", function(self, button)
+	if IsShiftKeyDown() then
+		toggleSlayerTaskFrame()
+	else
+		toggleLocationAndReminderText()
+	end
+end)
+
+
+
+clickFrame:SetScript("OnEnter", function(self)
+    GameTooltip:SetOwner(self, "ANCHOR_TOP")  
+	GameTooltip:SetText(IsShiftKeyDown() and "Hide" or "Minimise")  
+	GameTooltip:Show() 
+end)
+clickFrame:SetScript("OnLeave", function(self)
+    GameTooltip:Hide() 
+end)
+
+
+
 
 -- Minimap Icon for WORS_SlayerHelper using LibDBIcon and Ace3
 local addon = LibStub("AceAddon-3.0"):NewAddon("WORS_SlayerHelper")
@@ -209,16 +256,10 @@ local miniButton = LibStub("LibDataBroker-1.1"):NewDataObject("WORS_SlayerHelper
     icon = "Interface\\Icons\\slayericon",
 	OnClick = function(self, btn)
 		if btn == "LeftButton" then
-			if WORSSlayerTaskFrame:IsShown() then
-				WORSSlayerTaskFrame:Hide()
-			else
-				WORSSlayerTaskFrame:Show()
-			end
+			toggleSlayerTaskFrame()
 		elseif btn == "RightButton" then
 			WORSSlayerTaskFrame:Show()
-			showLocationText = not showLocationText
-			showReminderText = not showReminderText  -- Toggle the reminder text visibility
-			DisplaySlayerTask()  -- Update display to reflect the toggled reminder
+			toggleLocationAndReminderText()
 		end
 	end,
 
